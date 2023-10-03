@@ -1,0 +1,2 @@
+$azureAccessToken=$(az account get-access-token --query accessToken -o tsv)
+az rest --method get --headers "Authorization: Bearer $azureAccessToken=" --uri https://portal.azure.com/#@123.ca/resource/subscriptions/123/resourceGroups/OPGT-Prototyping/providers/Microsoft.KeyVault/vaults/kv-opgt-devops/overview
